@@ -5,8 +5,7 @@
     "compatibility_flags": ["nodejs_compat"],
     "main": "./dist/server/server.js",
     "assets": {
-        "directory": "./dist/client",
-        "binding": "ASSETS"
+        "directory": "./dist/client"
     },
     "observability": {
         "logs": {

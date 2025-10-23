@@ -6,7 +6,7 @@ import { defineConfig } from "vite"
 import devtoolsJson from "vite-plugin-devtools-json"
 import viteTsConfigPaths from "vite-tsconfig-paths"
 
-const isExport = process.env.VITE_EXPORT === "true"
+const isExport = process.env.IS_EXPORT === "true"
 
 const config = defineConfig({
     plugins: [

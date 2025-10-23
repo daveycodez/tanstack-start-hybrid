@@ -13,7 +13,7 @@
         "preview": "vite preview",
         "deploy": "pnpm run build && wrangler deploy",
         "cf-typegen": "wrangler types",
-        "export": "VITE_EXPORT=true vite build"
+        "export": "IS_EXPORT=true vite build"
     },
     "dependencies": {
         "@capacitor/core": "^7.4.4",

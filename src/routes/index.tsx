@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router"
 import { useEffect, useState } from "react"
+import { baseURL } from "@/lib/utils"
 
 export const Route = createFileRoute("/")({ component: IndexPage })
 
 function IndexPage() {
     const [hello, setHello] = useState<string>("")
     useEffect(() => {
-        fetch("/api/hello")
+        fetch(`${baseURL}/api/hello`)
             .then((res) => res.json())
             .then((data) => setHello(data.message))
     }, [])

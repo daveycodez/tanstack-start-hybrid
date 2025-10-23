@@ -1,27 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router"
 
 export const Route = createFileRoute("/posts/$postId")({
-    // ISR Cache headers for Cloudflare
-    headers: () => ({
-        "Cache-Control":
-            "public, max-age=60, s-maxage=60, stale-while-revalidate=300"
-    }),
-    head: ({ params }) => ({
-        meta: [
-            {
-                title: `Post ${params.postId}`
-            },
-            {
-                property: "og:title",
-                content: `Post ${params.postId}`
-            },
-            {
-                property: "og:image",
-                content:
-                    "https://tanstack-start-hybrid.daveycodez-a93.workers.dev/logo192.png"
-            }
-        ]
-    }),
     component: RouteComponent
 })
 

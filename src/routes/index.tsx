@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router"
 import { createServerFn } from "@tanstack/react-start"
 import { useEffect, useState } from "react"
-import { baseURL } from "@/lib/utils"
 
 export const Route = createFileRoute("/")({ component: IndexPage })
 
@@ -15,7 +14,7 @@ function IndexPage() {
     const [serverFnRes, setServerFnRes] = useState("")
 
     useEffect(() => {
-        fetch(`${baseURL}/api/hello`)
+        fetch(`/api/hello`)
             .then((res) => res.json())
             .then((data) => setHello(data.message))
     }, [])

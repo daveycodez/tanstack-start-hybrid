@@ -5,15 +5,26 @@ import viteReact from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import viteTsConfigPaths from "vite-tsconfig-paths"
 
+const isExport = true
+
 const config = defineConfig({
     plugins: [
-        cloudflare({ viteEnvironment: { name: "ssr" } }),
+        !isExport
+            ? cloudflare({ viteEnvironment: { name: "ssr" } })
+            : undefined,
         // this is the plugin that enables path aliases
         viteTsConfigPaths({
             projects: ["./tsconfig.json"]
         }),
         tailwindcss(),
-        tanstackStart(),
+        tanstackStart({
+            spa: {
+                enabled: isExport,
+                prerender: {
+                    outputPath: "/index.html"
+                }
+            }
+        }),
         viteReact()
     ]
 })

@@ -12,7 +12,7 @@ function IndexPage() {
     }, [])
 
     return (
-        <main className="container mx-auto">
+        <main className="container mx-auto my-24">
             <h1 className="text-2xl font-bold">{hello || "Loading..."}</h1>
 
             <Link

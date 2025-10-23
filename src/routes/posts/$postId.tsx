@@ -8,7 +8,7 @@ function RouteComponent() {
     const { postId } = Route.useParams()
 
     return (
-        <main className="container mx-auto">
+        <main className="container mx-auto my-24">
             <h1 className="text-2xl font-bold">Post {postId}</h1>
         </main>
     )

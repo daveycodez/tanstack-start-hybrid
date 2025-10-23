@@ -21,6 +21,13 @@ const config = defineConfig({
             prerender: {
                 enabled: true
             },
+            pages: [
+                { path: "/", prerender: { enabled: true } },
+                {
+                    path: "/posts/1",
+                    prerender: { enabled: true }
+                }
+            ],
             spa: {
                 enabled: isExport,
                 prerender: {

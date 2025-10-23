@@ -13,7 +13,7 @@
         "preview": "vite preview",
         "deploy": "pnpm run build && wrangler deploy",
         "cf-typegen": "wrangler types",
-        "export": "IS_EXPORT=true vite build"
+        "export": "cross-env IS_EXPORT=true vite build"
     },
     "dependencies": {
         "@capacitor/core": "^7.4.4",
@@ -27,6 +27,7 @@
         "@tanstack/router-plugin": "^1.133.22",
         "@tauri-apps/api": "^2.9.0",
         "@tauri-apps/plugin-http": "~2.5.2",
+        "cross-env": "^10.1.0",
         "lucide-react": "^0.546.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",

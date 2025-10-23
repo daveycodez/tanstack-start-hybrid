@@ -14,6 +14,11 @@ export const Route = createFileRoute("/posts/$postId")({
             {
                 property: "og:title",
                 content: `Post ${params.postId}`
+            },
+            {
+                property: "og:image",
+                content:
+                    "https://tanstack-start-hybrid.daveycodez-a93.workers.dev/logo192.png"
             }
         ]
     }),

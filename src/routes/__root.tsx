@@ -10,25 +10,25 @@ export const Route = createRootRoute({
     head: () => ({
         meta: [
             {
-                charSet: "utf-8",
+                charSet: "utf-8"
             },
             {
                 name: "viewport",
-                content: "width=device-width, initial-scale=1",
+                content: "width=device-width, initial-scale=1"
             },
             {
-                title: "TanStack Start Starter",
-            },
+                title: "TanStack Start Starter"
+            }
         ],
         links: [
             {
                 rel: "stylesheet",
-                href: appCss,
-            },
-        ],
+                href: appCss
+            }
+        ]
     }),
 
-    shellComponent: RootDocument,
+    shellComponent: RootDocument
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -42,13 +42,13 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                 {children}
                 <TanStackDevtools
                     config={{
-                        position: "bottom-right",
+                        position: "bottom-right"
                     }}
                     plugins={[
                         {
                             name: "Tanstack Router",
-                            render: <TanStackRouterDevtoolsPanel />,
-                        },
+                            render: <TanStackRouterDevtoolsPanel />
+                        }
                     ]}
                 />
                 <Scripts />

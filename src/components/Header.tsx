@@ -7,7 +7,7 @@ import {
     Network,
     SquareFunction,
     StickyNote,
-    X,
+    X
 } from "lucide-react"
 import { useState } from "react"
 
@@ -61,7 +61,7 @@ export default function Header() {
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
                         activeProps={{
                             className:
-                                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
+                                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2"
                         }}
                     >
                         <Home size={20} />
@@ -76,7 +76,7 @@ export default function Header() {
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
                         activeProps={{
                             className:
-                                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
+                                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2"
                         }}
                     >
                         <SquareFunction size={20} />
@@ -91,7 +91,7 @@ export default function Header() {
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
                         activeProps={{
                             className:
-                                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
+                                "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2"
                         }}
                     >
                         <Network size={20} />
@@ -105,7 +105,7 @@ export default function Header() {
                             className="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
                             activeProps={{
                                 className:
-                                    "flex-1 flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
+                                    "flex-1 flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2"
                             }}
                         >
                             <StickyNote size={20} />
@@ -118,7 +118,7 @@ export default function Header() {
                             onClick={() =>
                                 setGroupedExpanded((prev) => ({
                                     ...prev,
-                                    StartSSRDemo: !prev.StartSSRDemo,
+                                    StartSSRDemo: !prev.StartSSRDemo
                                 }))
                             }
                         >
@@ -137,7 +137,7 @@ export default function Header() {
                                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
                                 activeProps={{
                                     className:
-                                        "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
+                                        "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2"
                                 }}
                             >
                                 <StickyNote size={20} />
@@ -150,7 +150,7 @@ export default function Header() {
                                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
                                 activeProps={{
                                     className:
-                                        "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
+                                        "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2"
                                 }}
                             >
                                 <StickyNote size={20} />
@@ -163,7 +163,7 @@ export default function Header() {
                                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
                                 activeProps={{
                                     className:
-                                        "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2",
+                                        "flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2"
                                 }}
                             >
                                 <StickyNote size={20} />

@@ -5,14 +5,10 @@ import viteReact from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import viteTsConfigPaths from "vite-tsconfig-paths"
 
-const isExport = false
+const isExport = process.env.VITE_EXPORT === "true"
 
 const config = defineConfig({
     plugins: [
-        // !isExport
-        //     ? cloudflare({ viteEnvironment: { name: "ssr" } })
-        //     : undefined,
-        // this is the plugin that enables path aliases
         viteTsConfigPaths({
             projects: ["./tsconfig.json"]
         }),

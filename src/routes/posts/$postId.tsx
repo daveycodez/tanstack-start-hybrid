@@ -6,6 +6,17 @@ export const Route = createFileRoute("/posts/$postId")({
         "Cache-Control":
             "public, max-age=60, s-maxage=60, stale-while-revalidate=300"
     }),
+    head: ({ params }) => ({
+        meta: [
+            {
+                title: `Post ${params.postId}`
+            },
+            {
+                property: "og:title",
+                content: `Post ${params.postId}`
+            }
+        ]
+    }),
     component: RouteComponent
 })
 

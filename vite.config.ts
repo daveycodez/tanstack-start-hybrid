@@ -8,6 +8,8 @@ import viteTsConfigPaths from "vite-tsconfig-paths"
 
 const isExport = process.env.IS_EXPORT === "true"
 
+const prerenderPages = ["/", "/test", "/posts/1"]
+
 const config = defineConfig({
     plugins: [
         viteTsConfigPaths({
@@ -19,12 +21,10 @@ const config = defineConfig({
                 enabled: true
             },
             pages: [
-                { path: "/test", prerender: { enabled: true } },
-                { path: "/", prerender: { enabled: true } },
-                {
-                    path: "/posts/1",
+                ...prerenderPages.map((page) => ({
+                    path: page,
                     prerender: { enabled: true }
-                }
+                }))
             ],
             spa: {
                 enabled: isExport,

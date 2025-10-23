@@ -18,6 +18,9 @@ const config = defineConfig({
         }),
         tailwindcss(),
         tanstackStart({
+            prerender: {
+                enabled: true
+            },
             spa: {
                 enabled: isExport,
                 prerender: {

@@ -1,3 +1,5 @@
+use tauri::Manager;
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -10,6 +12,16 @@ pub fn run() {
                         .build(),
                 )?;
             }
+
+            let main_webview = app.get_webview_window("main").unwrap();
+            let _ = main_webview.with_webview(|webview| {
+                #[cfg(target_os = "macos")]
+                unsafe {
+                    let view: &objc2_web_kit::WKWebView = &*webview.inner().cast();
+                    view.setAllowsBackForwardNavigationGestures(true);
+                }
+            });
+
             Ok(())
         })
         .run(tauri::generate_context!())

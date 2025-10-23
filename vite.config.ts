@@ -22,6 +22,7 @@ const config = defineConfig({
                 enabled: true
             },
             pages: [
+                { path: "/test", prerender: { enabled: true } },
                 { path: "/", prerender: { enabled: true } },
                 {
                     path: "/posts/1",

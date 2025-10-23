@@ -26,6 +26,7 @@ export const Route = createFileRoute("/posts/$postId")({
 })
 
 function RouteComponent() {
+    console.log("PostComponent rendered")
     const { postId } = Route.useParams()
 
     return (

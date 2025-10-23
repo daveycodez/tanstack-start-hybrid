@@ -5,7 +5,7 @@ import viteReact from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import viteTsConfigPaths from "vite-tsconfig-paths"
 
-const isExport = true
+const isExport = false
 
 const config = defineConfig({
     plugins: [

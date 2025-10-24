@@ -8,7 +8,7 @@ import viteTsConfigPaths from "vite-tsconfig-paths"
 
 const isExport = process.env.IS_EXPORT === "true"
 
-const prerenderPages = ["/", "/test", "/posts/1"]
+const prerenderPages = ["/"]
 
 const config = defineConfig({
     plugins: [

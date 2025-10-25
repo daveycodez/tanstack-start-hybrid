@@ -5,9 +5,12 @@ export default {
         console.log("server entry!")
 
         // Redirect /test to / with temporary redirect
-        const url = new URL(request.url)
-        if (url.pathname === "/test") {
-            return Response.redirect(`${url.origin}/`, 302)
+
+        if (process.env.TSS_PRERENDERING !== "true") {
+            const url = new URL(request.url)
+            if (url.pathname === "/test") {
+                return Response.redirect(`${url.origin}/`, 302)
+            }
         }
 
         return handler.fetch(request)

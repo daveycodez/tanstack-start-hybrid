@@ -11,6 +11,8 @@ const isExport = process.env.IS_EXPORT === "true"
 // @ts-expect-error - Cloudflare fix
 globalThis.Cloudflare = { compatibilityFlags: {} }
 
+const prerenderPages = ["/", "/test"]
+
 const config = defineConfig({
     plugins: [
         // cloudflare({ viteEnvironment: { name: "ssr" } }),
@@ -27,7 +29,13 @@ const config = defineConfig({
                 prerender: {
                     outputPath: "/index.html"
                 }
-            }
+            },
+            pages: [
+                ...prerenderPages.map((page) => ({
+                    path: page,
+                    prerender: { enabled: true }
+                }))
+            ]
         }),
         viteReact(),
         devtoolsJson()

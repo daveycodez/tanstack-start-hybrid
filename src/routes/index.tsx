@@ -24,7 +24,6 @@ function IndexPage() {
             <h1 className="text-2xl font-bold">
                 {serverFnRes || hello || "Loading..."}
             </h1>
-
             <Link
                 to="/posts/$postId"
                 className="text-blue-500 underline"
@@ -32,7 +31,6 @@ function IndexPage() {
             >
                 Random Post
             </Link>
-
             <button
                 className="bg-blue-500 text-white px-4 py-2 rounded-md w-fit cursor-pointer"
                 type="button"
@@ -40,6 +38,7 @@ function IndexPage() {
             >
                 Get Server Time
             </button>
+            GOT THAT NEW NEW!
         </main>
     )
 }

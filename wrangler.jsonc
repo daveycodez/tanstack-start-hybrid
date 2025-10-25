@@ -3,7 +3,7 @@
     "name": "tanstack-start-hybrid",
     "compatibility_date": "2025-09-02",
     "compatibility_flags": ["nodejs_compat"],
-    "main": "./dist/server/server.js",
+    "main": "./src/server.ts",
     "assets": {
         "directory": "./dist/client"
     },

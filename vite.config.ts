@@ -8,10 +8,12 @@ import viteTsConfigPaths from "vite-tsconfig-paths"
 
 const isExport = process.env.IS_EXPORT === "true"
 
-const prerenderPages = ["/"]
+// @ts-expect-error - Cloudflare fix
+globalThis.Cloudflare = { compatibilityFlags: {} }
 
 const config = defineConfig({
     plugins: [
+        // cloudflare({ viteEnvironment: { name: "ssr" } }),
         viteTsConfigPaths({
             projects: ["./tsconfig.json"]
         }),
@@ -20,12 +22,6 @@ const config = defineConfig({
             prerender: {
                 enabled: true
             },
-            pages: [
-                ...prerenderPages.map((page) => ({
-                    path: page,
-                    prerender: { enabled: true }
-                }))
-            ],
             spa: {
                 enabled: isExport,
                 prerender: {

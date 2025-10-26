@@ -3,9 +3,8 @@ import handler from "@tanstack/react-start/server-entry"
 export default {
     fetch(request: Request) {
         // I need you to log everything about this request:
-        console.log("request", request) // This only comes back as [object Request] in the logs which is not helpful!
         console.log("request.url", request.url) // This comes back as the full URL
-        console.log("request.headers", request.headers) // This comes back as a Headers object
+        console.log("request.headers", Object.fromEntries(request.headers)) // This comes back as a Headers object
         console.log("request.body", request.body) // This comes back as a ReadableStream
         console.log("request.method", request.method) // This comes back as the HTTP method
         console.log("request.mode", request.mode) // This comes back as the request mode

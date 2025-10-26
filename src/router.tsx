@@ -8,15 +8,15 @@ export const getRouter = () => {
     return createRouter({
         routeTree,
         scrollRestoration: true,
-        defaultPreloadStaleTime: 0,
-        rewrite: {
-            input: ({ url }) => {
-                if (url.pathname === "/test") {
-                    url.pathname = "/"
-                }
+        defaultPreloadStaleTime: 0
+        // rewrite: {
+        //     input: ({ url }) => {
+        //         if (url.pathname === "/test") {
+        //             url.pathname = "/"
+        //         }
 
-                return url
-            }
-        }
+        //         return url
+        //     }
+        // }
     })
 }

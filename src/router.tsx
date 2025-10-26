@@ -16,13 +16,6 @@ export const getRouter = () => {
                 }
 
                 return url
-            },
-            output: ({ url }) => {
-                if (url.pathname === "/test") {
-                    url.pathname = "/"
-                }
-
-                return url
             }
         }
     })

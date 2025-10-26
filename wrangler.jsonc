@@ -6,7 +6,7 @@
     "main": "./dist/server/server.js",
     "assets": {
         "directory": "./dist/client",
-        "html_handling": "drop-trailing-slash"
+        "html_handling": "auto-trailing-slash"
     },
     "observability": {
         "logs": {

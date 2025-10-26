@@ -22,6 +22,12 @@ export default {
         //     return Response.redirect(`${url.origin}/`, 302)
         // }
 
+        return new Response(null, {
+            headers: {
+                Location: request.url
+            }
+        })
+
         return handler.fetch(request)
     }
 }

@@ -2,7 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router"
 import { createServerFn } from "@tanstack/react-start"
 import { useEffect, useState } from "react"
 
-export const Route = createFileRoute("/")({ component: IndexPage })
+export const Route = createFileRoute("/")({
+    component: IndexPage
+})
 
 const getServerTime = createServerFn().handler(async () => {
     // This runs only on the server
@@ -12,8 +14,10 @@ const getServerTime = createServerFn().handler(async () => {
 function IndexPage() {
     const [hello, setHello] = useState("")
     const [serverFnRes, setServerFnRes] = useState("")
+    const [postId, setPostId] = useState("0")
 
     useEffect(() => {
+        setPostId(Math.floor(Math.random() * 100).toString())
         fetch(`/api/hello`)
             .then((res) => res.json())
             .then((data) => setHello(data.message))
@@ -27,7 +31,7 @@ function IndexPage() {
             <Link
                 to="/posts/$postId"
                 className="text-blue-500 underline"
-                params={{ postId: `${Math.floor(Math.random() * 100)}` }}
+                params={{ postId }}
             >
                 Random Post
             </Link>
